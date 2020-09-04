@@ -1,0 +1,23 @@
+@font-face {
+  font-family: "Proxima Nova";
+  font-display: swap;
+  src: url("../fonts/Proxima Nova Alt Light.woff") format("woff"), url("../fonts/Proxima Nova Alt Light.woff2") format("woff2");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Roboto";
+  font-display: swap;
+  src: url("../fonts/RobotoBold.woff") format("woff"), url("../fonts/RobotoBold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Roboto";
+  font-display: swap;
+  src: url("../fonts/RobotoLight.woff") format("woff"), url("../fonts/RobotoLight.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
