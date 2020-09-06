@@ -44,8 +44,9 @@ document.addEventListener('DOMContentLoaded', () => {
     let headerHeight =
       headerWrapper.querySelector('.header-socials').offsetHeight +
       headerWrapper.querySelector('.header-lang').offsetHeight +
-      menu.offsetHeight;
-    headerWrapper.style.height = `${headerHeight + 80}px`;
+      menu.offsetHeight + 20;
+    headerWrapper.style.height = `${headerHeight}px`;
+    alert(headerHeight);
     menu.style.opacity = 1;
   }
   function CloseBurger() {
