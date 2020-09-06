@@ -680,6 +680,10 @@ picture > img {
   .header .header-wrapper .header-socials {
     margin-right: 0;
   }
+
+  .header .header-wrapper .header-lang {
+    margin-bottom: 10px;
+  }
 }
 
 .webp .footer-wrapper .footer-contacts .phone-mail a.phone:before { background-image: url(../img/phone.webp); }

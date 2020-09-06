@@ -156,6 +156,7 @@ main{
       height: 60px;
       overflow-y: hidden;
       transition: all 0.3s;
+
       nav.header-menu{
         transition: all 0.3s;
         margin-top: 60px;
@@ -179,6 +180,7 @@ main{
       }
       .header-lang{
         //height: 35px;
+        margin-bottom: 10px;
       }
     }
   }
