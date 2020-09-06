@@ -43,7 +43,7 @@ document.addEventListener('DOMContentLoaded', () => {
   //! -----------------[Functions]-------------
   function OpenBurger() {
     menu.style.marginTop = '0';
-    let headerHeight = socials.offsetHeight + lang.offsetHeight + menu.offsetHeight + 20;
+    let headerHeight = socials.scrollHeight + lang.scrollHeight + menu.scrollHeight + 20;
     headerWrapper.style.height = `${headerHeight}px`;
     menu.style.opacity = 1;
   }
