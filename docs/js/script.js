@@ -47,6 +47,7 @@ document.addEventListener('DOMContentLoaded', () => {
       menu.offsetHeight;
     headerWrapper.style.height = `${headerHeight + 20}px`;
     menu.style.opacity = 1;
+    alert(headerHeight);
   }
   function CloseBurger() {
     menu.style.marginTop = '60px';
