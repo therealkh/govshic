@@ -19,7 +19,6 @@ main {
 
 .header .header-wrapper {
   height: 60px;
-  padding-top: 60px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -653,6 +652,7 @@ picture > img {
     -webkit-transition: all 0.3s;
     -o-transition: all 0.3s;
     transition: all 0.3s;
+    margin-top: 60px;
   }
 
   .header .header-wrapper nav.header-menu > ul {

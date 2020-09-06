@@ -19,7 +19,7 @@ main{
   width: 100%;
   .header-wrapper {
     height: 60px;
-    padding-top: 60px;
+    //padding-top: 60px;
     display: flex;
     justify-content: space-between;
     position: relative;
@@ -157,6 +157,7 @@ main{
       transition: all 0.3s;
       nav.header-menu{
         transition: all 0.3s;
+        margin-top: 60px;
         &>ul{
           flex-direction: column;
           align-items: center;
