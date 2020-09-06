@@ -46,6 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let headerHeight = socials.scrollHeight + lang.scrollHeight + menu.scrollHeight + 20;
     headerWrapper.style.height = `${headerHeight}px`;
     menu.style.opacity = 1;
+    alert(`${socials.scrollHeight} + ${lang.scrollHeight} + ${menu.scrollHeight} + 20 = ${headerHeight}`);
   }
   function CloseBurger() {
     menu.style.marginTop = '60px';
