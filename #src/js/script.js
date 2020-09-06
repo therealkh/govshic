@@ -43,12 +43,13 @@ document.addEventListener('DOMContentLoaded', () => {
   //! -----------------[Functions]-------------
   function OpenBurger() {
     menu.style.marginTop = '0';
-    //let headerHeight = headerWrapper.scrollHeight;
-    //headerWrapper.style.minHeight = `${headerHeight}px`;
-    headerWrapper.style.height = '270px';
+    let headerHeight = headerWrapper.scrollHeight;
+    headerWrapper.style.height = `${headerHeight}px`;
+    alert(headerHeight);
+    //headerWrapper.style.height = 'unset';
     //headerWrapper.style.paddingTop = '0';
     //headerWrapper.style.overflowY = 'unset';
-    menu.style.opacity = 1;
+    //menu.style.opacity = 1;
 
   }
   function CloseBurger() {
@@ -57,7 +58,7 @@ document.addEventListener('DOMContentLoaded', () => {
     //headerWrapper.style.minHeight = 'unset';
     menu.style.marginTop = '60px';
     headerWrapper.style.height = '60px';
-    menu.style.opacity = 0;
+    //menu.style.opacity = 0;
   }
   function BurgerOff() {
     menu.style.marginTop = 'unset';

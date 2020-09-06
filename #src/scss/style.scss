@@ -131,7 +131,6 @@ main{
         }
       }
     }
-
     .header-lang {
       display: flex;
       align-items: center;
@@ -148,6 +147,8 @@ main{
         }
       }
     }
+
+
     @media (max-width: 575px) {
       flex-direction: column;
       justify-content: space-between;
@@ -172,9 +173,12 @@ main{
           }
         }
       }
-      ul.header-socials {
+      .header-socials {
         margin-right: 0;
-        margin-bottom: 20px;
+        //height: 60px;
+      }
+      .header-lang{
+        //height: 35px;
       }
     }
   }

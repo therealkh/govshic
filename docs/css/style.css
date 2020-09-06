@@ -677,9 +677,8 @@ picture > img {
     margin: 10px;
   }
 
-  .header .header-wrapper ul.header-socials {
+  .header .header-wrapper .header-socials {
     margin-right: 0;
-    margin-bottom: 20px;
   }
 }
 
