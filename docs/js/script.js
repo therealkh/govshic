@@ -41,9 +41,12 @@ document.addEventListener('DOMContentLoaded', () => {
   //! -----------------[Functions]-------------
   function OpenBurger() {
     menu.style.marginTop = '0';
-    let headerHeight = menu.offsetHeight + 80;
+    let headerHeight =
+      headerWrapper.querySelector('.header-socials').offsetHeight +
+      headerWrapper.querySelector('.header-lang').offsetHeight +
+      menu.offsetHeight + 20;
     headerWrapper.style.height = `${headerHeight}px`;
-    alert(headerHeight);
+    alert(`${headerWrapper.querySelector('.header-socials').offsetHeight} + ${headerWrapper.querySelector('.header-lang').offsetHeight} + ${menu.offsetHeight} = ${headerHeight} `);
     menu.style.opacity = 1;
   }
   function CloseBurger() {
