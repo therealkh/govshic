@@ -45,7 +45,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const lang = headerWrapper.querySelector('.header-lang');
     let headerHeight = socials.offsetHeight + lang.offsetHeight + menu.offsetHeight + 20;
     headerWrapper.style.height = `${headerHeight}px`;
-    alert(`${headerWrapper.querySelector('.header-socials').offsetHeight} + ${headerWrapper.querySelector('.header-lang').offsetHeight} + ${menu.offsetHeight} = ${headerHeight} `);
     menu.style.opacity = 1;
   }
   function CloseBurger() {
