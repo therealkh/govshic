@@ -68,6 +68,7 @@ main{
     }
     nav.header-menu {
       flex-grow: 1;
+      box-sizing: border-box;
       &>ul{
         list-style: none;
         display: flex;
@@ -107,6 +108,7 @@ main{
       }
     }
     .header-socials {
+      box-sizing: border-box;
       list-style: none;
       display: flex;
       align-items: center;
@@ -132,6 +134,7 @@ main{
     .header-lang {
       display: flex;
       align-items: center;
+      box-sizing: border-box;
       &>a{
         font-size: 16px;
         color: rgba($color: $color_dark, $alpha: 0.5);
@@ -188,6 +191,7 @@ main{
     & .footer{
       &-contacts{
         width: 30%;
+        
         @media (max-width: 991px){
           width: 40%;
         }

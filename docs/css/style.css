@@ -95,6 +95,8 @@ main {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 .header .header-wrapper nav.header-menu > ul {
@@ -156,6 +158,8 @@ main {
 }
 
 .header .header-wrapper .header-socials {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   list-style: none;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -197,6 +201,8 @@ main {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 .header .header-wrapper .header-lang > a {
