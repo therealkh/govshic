@@ -42,7 +42,9 @@ document.addEventListener('DOMContentLoaded', () => {
   function OpenBurger() {
     menu.style.marginTop = '0';
     const socials = headerWrapper.querySelector('.header-socials');
+    socials = socials.cloneNode(true);
     const lang = headerWrapper.querySelector('.header-lang');
+    lang = lang.cloneNode(true);
     let headerHeight = socials.offsetHeight + lang.offsetHeight + menu.offsetHeight + 20;
     headerWrapper.style.height = `${headerHeight}px`;
     menu.style.opacity = 1;
