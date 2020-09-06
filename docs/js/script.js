@@ -2,6 +2,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const burger = document.querySelector('.burger');
   const headerWrapper = document.querySelector('.header-wrapper');
   const menu = document.querySelector('nav.header-menu');
+  const socials = headerWrapper.querySelector('.header-socials');
+  const lang = headerWrapper.querySelector('.header-lang');
 
   let lastDocWidth;
   lastDocWidth = window.innerWidth;
@@ -41,10 +43,6 @@ document.addEventListener('DOMContentLoaded', () => {
   //! -----------------[Functions]-------------
   function OpenBurger() {
     menu.style.marginTop = '0';
-    const socials = headerWrapper.querySelector('.header-socials');
-    socials = socials.cloneNode(true);
-    const lang = headerWrapper.querySelector('.header-lang');
-    lang = lang.cloneNode(true);
     let headerHeight = socials.offsetHeight + lang.offsetHeight + menu.offsetHeight + 20;
     headerWrapper.style.height = `${headerHeight}px`;
     menu.style.opacity = 1;
