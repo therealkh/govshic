@@ -43,16 +43,16 @@ document.addEventListener('DOMContentLoaded', () => {
   //! -----------------[Functions]-------------
   function OpenBurger() {
     menu.style.marginTop = '0';
-    //let headerHeight = socials.scrollHeight + lang.scrollHeight + menu.scrollHeight + 20;
     let headerHeight = headerWrapper.scrollHeight;
     headerWrapper.style.height = `${headerHeight}px`;
     headerWrapper.style.paddingTop = '0';
+    headerWrapper.style.overflowY = 'unset';
     menu.style.opacity = 1;
-    //alert(`${socials.scrollHeight} + ${lang.scrollHeight} + ${menu.scrollHeight} + 20 = ${headerHeight}`);
-    //alert(`${headerHeight}`);
+
   }
   function CloseBurger() {
     headerWrapper.style.paddingTop = '60px';
+    headerWrapper.style.overflowY = 'hidden';
     //menu.style.marginTop = '60px';
     headerWrapper.style.height = '60px';
     menu.style.opacity = 0;
