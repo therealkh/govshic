@@ -176,10 +176,8 @@ main{
       }
       .header-socials {
         margin-right: 0;
-        //height: 60px;
       }
       .header-lang{
-        //height: 35px;
         margin-bottom: 10px;
       }
     }
@@ -198,8 +196,11 @@ main{
     & .footer{
       &-contacts{
         width: 30%;
-        
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         @media (max-width: 991px){
+          border: 1px solid #000;
           width: 40%;
         }
         @media (max-width: 767px){
@@ -256,6 +257,10 @@ main{
           align-items: center;
           margin-right: 30px;
           flex-grow: 1;
+          @media (max-width: 991px){
+            margin: 0 auto;
+            border: 1px solid #000;
+          }
           &>.footer-socials-item {
             &>a {
               width: 45px;

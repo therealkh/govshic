@@ -240,17 +240,20 @@ main {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  min-height: 170px;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  display: flex;
+  min-height: 170px;
+  flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  align-items: center;
 }
 
 .footer-wrapper .footer-contacts .phone-mail {
@@ -597,7 +600,13 @@ picture > img {
 
 @media (max-width: 991px) {
   .footer-wrapper .footer-contacts {
+    border: 1px solid #000;
     width: 40%;
+  }
+
+  .footer-wrapper .footer-contacts .socials {
+    margin: 0 auto;
+    border: 1px solid #000;
   }
 
   .footer-wrapper .footer-feedback {
