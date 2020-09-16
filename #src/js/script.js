@@ -37,6 +37,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
     lastDocWidth = width;
   });
+  //?----------
+  window.addEventListener('scroll', function () {
+    let scroll = pageYOffset;
+    if (scroll > 0) {
+      PaintHeader();
+    }
+    else {
+      UnPaintHeader();
+    }
+  });
 
 
 
@@ -45,16 +55,32 @@ document.addEventListener('DOMContentLoaded', () => {
     let headerHeight = headerWrapper.scrollHeight;
     menu.style.marginTop = '0';
     headerWrapper.style.height = `${headerHeight}px`;
+    let scroll = pageYOffset;
+    if (scroll == 0) {
+      PaintHeader();
+    }
   }
   function CloseBurger() {
     menu.style.marginTop = '60px';
     headerWrapper.style.height = '60px';
+    let scroll = pageYOffset;
+    if (scroll == 0) {
+      UnPaintHeader();
+    }
   }
   function BurgerOff() {
     menu.style.marginTop = 'unset';
     headerWrapper.style.height = '60px';
     menu.style.opacity = 'unset';
     burger.classList.remove('active');
+  }
+  function PaintHeader() {
+    let header = document.querySelector('.header');
+    header.classList.add('bgw');
+  }
+  function UnPaintHeader() {
+    let header = document.querySelector('.header');
+    header.classList.remove('bgw');
   }
 
 
@@ -71,4 +97,5 @@ document.addEventListener('DOMContentLoaded', () => {
       CloseBurger();
     }
   }
+
 });
