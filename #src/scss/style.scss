@@ -231,8 +231,8 @@ main{
     position: relative;
     background-color: transparent;
     padding: 50px 0;
-    //height: 600px;
     transition: all 0.5s ease-in-out;
+    overflow: hidden;
     @media (max-width: 575px){
       flex-direction: column;
     }
@@ -283,6 +283,7 @@ main{
     }
     @media (max-width: 575px){
       height: 50%;
+      justify-content: flex-start;
     }
     &__name {
       font-family: 'Poiret One';
