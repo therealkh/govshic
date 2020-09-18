@@ -87,8 +87,10 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     }
     about.style.display = 'flex';
+
     let aboutHeight = about.scrollHeight;
     mainWrapper.style.height = `${aboutHeight}px`;
+
     setTimeout(() => {
       about.classList.add('shown');
     }, 1);
