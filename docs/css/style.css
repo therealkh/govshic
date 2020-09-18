@@ -695,6 +695,7 @@ body {
   outline: none;
   background-color: transparent;
   border: none;
+  border-radius: 0;
   border-bottom: 1px solid #836040;
   margin-bottom: 25px;
   width: 100%;

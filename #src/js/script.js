@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
   mainWrapper.style.height = `${wrapperHeight}px`;
 
 
-  //?----------
+  //?-----[Clicks]-----
   document.addEventListener('click', (event) => {
     if (event.target.closest('.burger')) {
       burger.classList.toggle('active');
@@ -52,7 +52,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
-  //?----------
+  //?------[Resize]----
   window.addEventListener('resize', (event) => {
     width = event.target.innerWidth;
     if (lastDocWidth > width) {
@@ -64,7 +64,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     lastDocWidth = width;
   });
-  //?----------
+
+
+
+  //?-----[Scrolling]------
   window.addEventListener('scroll', function () {
     let scroll = pageYOffset;
     if (scroll > 0) {
@@ -77,9 +80,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
+
   //! -----------------[Functions]-------------
   function OpenAbout() {
-
     let mainWrapperChildren = mainWrapper.children;
     for (let i = 0; i < mainWrapperChildren.length; i++) {
       if (mainWrapperChildren[i] != about) {
@@ -94,9 +97,6 @@ document.addEventListener('DOMContentLoaded', () => {
       about.classList.add('shown');
     }, 300);
   }
-
-
-
   function CloseAbout() {
     about.classList.remove('shown');
     setTimeout(() => {
@@ -108,9 +108,6 @@ document.addEventListener('DOMContentLoaded', () => {
       about.style.display = 'none';
     }, 500);
   }
-
-
-
   function OpenBurger() {
     let headerHeight = headerWrapper.scrollHeight;
     menu.style.marginTop = '0';
@@ -151,11 +148,9 @@ document.addEventListener('DOMContentLoaded', () => {
       BurgerOff();
     }
   }
-
   function OnWindowResizeDown(width) {
     if (width <= 575 && lastDocWidth > 575) {
       CloseBurger();
     }
   }
-
 });
