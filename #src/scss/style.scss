@@ -232,7 +232,8 @@ main{
     background-color: transparent;
     padding: 50px 0;
     height: 600px;
-    transition: all 0.3s;
+    transition: all 0.5s;
+    overflow: hidden;
     @media (max-width: 575px){
       flex-direction: column;
     }
@@ -242,6 +243,7 @@ main{
   }
   &__img {
     width: 485px;
+    max-width: 100%;
     padding: 20px 40px 20px 20px;
     transition: opacity 0.3s;
     @media (max-width: 1900px){
@@ -275,6 +277,7 @@ main{
     justify-content: space-between;
     align-items: flex-start;
     transition: opacity 0.3s;
+    max-width: 100%;
     @media (max-width: 767px){
       width: 300px;
       height: 200px;
@@ -296,7 +299,7 @@ main{
       margin-bottom: 20px;
       @include max-text-lines(4);
       @media (max-width: 767px){
-        font-size: 15px;
+        font-size: 14px;
         max-width: 300px;
         @include max-text-lines(3);
       }
