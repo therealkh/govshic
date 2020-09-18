@@ -87,28 +87,30 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     }
     about.style.display = 'flex';
-
     let aboutHeight = about.scrollHeight;
+    mainWrapper.style.height = 0;
     mainWrapper.style.height = `${aboutHeight}px`;
-
     setTimeout(() => {
       about.classList.add('shown');
-    }, 1);
+    }, 300);
   }
+
+
+
   function CloseAbout() {
     about.classList.remove('shown');
-
-    mainWrapper.style.height = '';
-    let mainWrapperChildren = mainWrapper.children;
-    for (let i = 0; i < mainWrapperChildren.length; i++) {
-      //mainWrapperChildren[i].style.visibility = '';
-      mainWrapperChildren[i].style.opacity = 1;
-    }
-
     setTimeout(() => {
+      mainWrapper.style.height = `${wrapperHeight}px`;
+      let mainWrapperChildren = mainWrapper.children;
+      for (let i = 0; i < mainWrapperChildren.length; i++) {
+        mainWrapperChildren[i].style.opacity = 1;
+      }
       about.style.display = 'none';
     }, 300);
   }
+
+
+
   function OpenBurger() {
     let headerHeight = headerWrapper.scrollHeight;
     menu.style.marginTop = '0';
