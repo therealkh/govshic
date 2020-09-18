@@ -14,6 +14,8 @@ document.addEventListener('DOMContentLoaded', () => {
   let lastDocWidth;
   lastDocWidth = window.innerWidth;
 
+  let wrapperHeight = mainWrapper.scrollHeight;
+  mainWrapper.style.height = `${wrapperHeight}px`;
 
 
   //?----------
@@ -25,6 +27,13 @@ document.addEventListener('DOMContentLoaded', () => {
       }
       else {
         CloseBurger();
+      }
+    }
+    else {
+      if (burger.classList.contains('active')) {
+        event.preventDefault();
+        CloseBurger();
+        burger.classList.remove('active');
       }
     }
     if (event.target === btnAbout) {
@@ -86,6 +95,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
   function CloseAbout() {
     about.classList.remove('shown');
+
     mainWrapper.style.height = '';
     let mainWrapperChildren = mainWrapper.children;
     for (let i = 0; i < mainWrapperChildren.length; i++) {

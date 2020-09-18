@@ -255,6 +255,7 @@ body {
   position: relative;
   background-color: transparent;
   padding: 50px 0;
+  height: 600px;
   -webkit-transition: all 0.3s;
   -o-transition: all 0.3s;
   transition: all 0.3s;
