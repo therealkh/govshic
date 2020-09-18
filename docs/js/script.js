@@ -106,7 +106,7 @@ document.addEventListener('DOMContentLoaded', () => {
         mainWrapperChildren[i].style.opacity = 1;
       }
       about.style.display = 'none';
-    }, 300);
+    }, 500);
   }
 
 
