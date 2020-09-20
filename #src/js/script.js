@@ -1,3 +1,4 @@
+//!---[jQuery]
 $(document).ready(function () {
   $('.works-slider').slick({
     verticalSwiping: true,
@@ -8,11 +9,10 @@ $(document).ready(function () {
     //autoplaySpeed: 4000,
   });
 });
-
 $(window).resize(function () {
   $('.works-slider').slick('setPosition');
 });
-
+//!---[JavaScript]
 document.addEventListener('DOMContentLoaded', () => {
   const burger = document.querySelector('.burger');
   const headerWrapper = document.querySelector('.header-wrapper');
@@ -39,6 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   //?-----[Clicks]-----
   document.addEventListener('click', (event) => {
+    console.log(event.target);
     if (event.target.closest('.burger')) {
       burger.classList.toggle('active');
       if (burger.classList.contains('active')) {
@@ -49,10 +50,13 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     }
     else {
-      if (burger.classList.contains('active')) {
-        event.preventDefault();
-        CloseBurger();
-        burger.classList.remove('active');
+      if (!event.target.closest('.header-wrapper')) {
+        console.log(123);
+        if (burger.classList.contains('active')) {
+          event.preventDefault();
+          CloseBurger();
+          burger.classList.remove('active');
+        }
       }
     }
     if (event.target === btnAbout) {
