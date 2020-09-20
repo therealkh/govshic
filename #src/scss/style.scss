@@ -137,7 +137,7 @@ main{
             transition: all 0.5s;
             border-bottom: 2px solid transparent;
             &:hover{
-              border-bottom: 2px solid $color_semidark;
+              border-bottom: 2px solid $color_dark;
             }
           }
         }
@@ -474,6 +474,155 @@ main{
 
 
 
+.works {
+  &__title {
+    h3 {
+      color: $color_dark;
+    }
+  }
+  &__wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    padding: 50px 0;
+    @media (max-width: 767px){
+      flex-direction: column;
+    }
+  }
+  &__slider {
+    width: 400px;
+    height: 400px;
+    display: flex;
+    filter: drop-shadow(20px 20px 40px rgba(255, 189, 129, 0.4));
+    position: relative;
+    @media (max-width: 991px) and (min-width: 768px){
+      width: 300px;
+      height: 300px;
+      filter: drop-shadow(10px 10px 20px rgba(255, 189, 129, 0.4));
+    }
+    @media (max-width: 767px){
+      margin-bottom: 30px;
+    }
+    @media (max-width: 500px){
+      width: 280px;
+      height: 280px;
+    }
+    @media (max-width: 370px){
+      width: 250px;
+      height: 250px;
+    }
+
+    &:before{
+      content: '';
+      position: absolute;
+      top: -20px;
+      left: -20px;
+      background-color: $color_semidark;
+      width: 50%;
+      height: 50%;
+    }
+    & .slick {
+      &-slider {
+        outline: none;
+      }
+      &-list {
+        overflow: hidden;
+      }
+      &-slide{
+        width: 100%!important;
+      }
+      &-track {
+        display: flex;
+        flex-direction: column;
+      }
+      &-dots {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        left: 0;
+        transform: translateX(-100%);
+        bottom: 15%;
+        align-items: center;
+        list-style: none;
+        @media (max-width: 991px) and (min-width: 768px){
+          bottom: 9%;
+        }
+        @media (max-width: 500px){
+          bottom: 9%;
+        }
+        @media (max-width: 370px){
+          bottom: 6%;
+        }
+        li {
+          font-size: 0;
+          width: 10px;
+          height: 10px;
+          border-radius: 5px;
+          margin: 5px;
+          transition: all 0.2s;
+          background-color: $color_semidark;
+          & > button {
+            display: none;
+          }
+          &.slick-active {
+            height: 15px;
+            box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+            background-color: $color_dark;
+          }
+        }
+      }
+    }
+    .works-slider{
+      img {
+        object-fit: contain;
+      }
+    }
+  }
+  &__content {
+    width: 400px;
+    margin-left: 65px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background-color: transparent;
+    @media (max-width: 991px) and (min-width: 768px){
+      width: 300px;
+      margin-left: 30px;
+    }
+    @media (max-width: 767px){
+      margin-left: 0;
+      width: 350px;
+      //height: 350px;
+    }
+    @media (max-width: 575px){
+      width: 100%;
+    }
+
+    .works-content {
+      &__text {
+        @include max-text-lines(14);
+        margin-bottom: 20px;
+        font-size: 15px;
+        text-align: justify;
+        color: #836040;
+        @media (max-width: 991px){
+          font-size: 13px;
+          @include max-text-lines(10);
+        }
+      }
+      &__btn .btn-light{
+        @media (max-width: 991px){
+          font-size: 17px;
+          padding: 10px 20px;
+        }
+      }
+    }
+  }
+}
+
+
 
 .footer{
   background-color: $color_semidark;
@@ -677,6 +826,9 @@ picture{
   }
 }
 .btn-dark{
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background-color: transparent;
   border: 2px solid $color_dark;
   box-sizing: border-box;
@@ -705,6 +857,9 @@ picture{
   }
 }
 .btn-light{
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: transparent;
   border: 2px solid $color_semidark;
   box-sizing: border-box;
@@ -758,6 +913,9 @@ picture{
     @media (max-width: 767px) {
       font-size: 50px;
     }
+    @media (max-width: 575px) {
+      font-size: 40px;
+    }
   }
 }
 
@@ -781,7 +939,7 @@ picture{
   z-index: -1;
   width: 15%;
   right: 0;
-  top: 400px;
+  top: 300px;
   &>img{
     width: 100%;
     object-fit: contain;

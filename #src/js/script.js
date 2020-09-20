@@ -1,3 +1,18 @@
+$(document).ready(function () {
+  $('.works-slider').slick({
+    verticalSwiping: true,
+    vertical: true,
+    dots: true,
+    arrows: false,
+    //autoplay: true,
+    //autoplaySpeed: 4000,
+  });
+});
+
+$(window).resize(function () {
+  $('.works-slider').slick('setPosition');
+});
+
 document.addEventListener('DOMContentLoaded', () => {
   const burger = document.querySelector('.burger');
   const headerWrapper = document.querySelector('.header-wrapper');
@@ -16,6 +31,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
   let wrapperHeight = mainWrapper.scrollHeight;
   mainWrapper.style.height = `${wrapperHeight}px`;
+
+
+  CheckHeaderPaint();
+
 
 
   //?-----[Clicks]-----
@@ -65,17 +84,9 @@ document.addEventListener('DOMContentLoaded', () => {
     lastDocWidth = width;
   });
 
-
-
   //?-----[Scrolling]------
   window.addEventListener('scroll', function () {
-    let scroll = pageYOffset;
-    if (scroll > 0) {
-      PaintHeader();
-    }
-    else {
-      UnPaintHeader();
-    }
+    CheckHeaderPaint();
   });
 
 
@@ -139,7 +150,15 @@ document.addEventListener('DOMContentLoaded', () => {
     let header = document.querySelector('.header');
     header.classList.remove('bgw');
   }
-
+  function CheckHeaderPaint() {
+    let scroll = pageYOffset;
+    if (scroll > 0) {
+      PaintHeader();
+    }
+    else {
+      UnPaintHeader();
+    }
+  }
 
 
   //! ------------------[Custom Events]------------------
