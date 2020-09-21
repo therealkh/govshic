@@ -39,7 +39,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
   //?-----[Clicks]-----
   document.addEventListener('click', (event) => {
-    console.log(event.target);
     if (event.target.closest('.burger')) {
       burger.classList.toggle('active');
       if (burger.classList.contains('active')) {
@@ -51,7 +50,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     else {
       if (!event.target.closest('.header-wrapper')) {
-        console.log(123);
         if (burger.classList.contains('active')) {
           event.preventDefault();
           CloseBurger();
