@@ -725,8 +725,8 @@ body {
   position: relative;
   overflow: hidden;
   margin: 10px;
-  -webkit-box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.15);
-          box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.15);
+  -webkit-box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.15);
+          box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.15);
 }
 
 .instagram__item .instagram__more {

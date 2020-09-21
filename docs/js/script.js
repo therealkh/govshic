@@ -158,7 +158,9 @@ document.addEventListener('DOMContentLoaded', () => {
       PaintHeader();
     }
     else {
-      UnPaintHeader();
+      if (!burger.classList.contains('active')) {
+        UnPaintHeader();
+      }
     }
   }
 
