@@ -797,10 +797,15 @@ body {
 }
 
 .instagram picture {
+  width: 100%;
   height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
-.instagram img {
+.instagram picture img {
+  width: 100%;
+  height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
