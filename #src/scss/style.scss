@@ -645,6 +645,7 @@ main{
     position: relative;
     overflow: hidden;
     margin: 10px;
+    box-shadow: 10px 10px 30px rgba($color: #000000, $alpha: 0.15);
     @media (max-width: 1199px){
       width: 200px;
       height: 200px;
